@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.simple-blended {
+  background-image: url(/student.png), linear-gradient(rgb(3, 3, 3), rgba(15, 15, 15, 0.888));
+  background-blend-mode: overlay;
+}
+
+:root {
+  background: linear-gradient(180deg, #080808 20.82%, rgba(112, 99, 60, 0.89) 100%);
+}
