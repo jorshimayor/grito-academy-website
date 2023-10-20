@@ -1,11 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 const Navbar = () => {
   return (
     <div>
-      <nav className="bg-[#080808] h-[87px] fixed border-gray-200 w-full">
+      <nav className="bg-[#080808] h-[87px] border-gray-200 w-full">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <Link href="#home" className="flex items-start -ml-20">
             <Image
@@ -17,7 +16,7 @@ const Navbar = () => {
             />
           </Link>
 
-          <div className="hidden w-full md:block md:w-auto" id="navbar-default">
+          <div className="hidden w-full md:block md:w-auto">
             <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border  md:flex-row md:space-x-8 md:mt-0 md:border-0">
               <li>
                 <Link

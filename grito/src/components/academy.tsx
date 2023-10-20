@@ -19,7 +19,7 @@ const Academy = () => {
 
               <p className="text-justify text-white">
                 Learn in milestones at your own pace and build your <br />
-                first software product within 60days with Your Expert <br />
+                first software product within 60 days with Your Expert <br />
                 Tech Guide.
               </p>
             </div>

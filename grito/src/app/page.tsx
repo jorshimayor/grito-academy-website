@@ -1,10 +1,8 @@
-import Image from "next/image";
-
-import Navbar from "@/components/navbar";
+import Academy from "@/components/academy";
+import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
-import Academy from "../../public/academy";
-import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
 
 export default function Home() {
   return (
