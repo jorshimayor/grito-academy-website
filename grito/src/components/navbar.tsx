@@ -4,7 +4,7 @@ import Link from "next/link";
 const Navbar = () => {
   return (
     <div>
-      <nav className="bg-[#080808] h-[87px] border-gray-200 w-full">
+      <nav className="bg-[#080808] h-[87px] fixed border-gray-200 w-full">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <Link href="#home" className="flex items-start -ml-20">
             <Image
@@ -40,7 +40,7 @@ const Navbar = () => {
               <li>
                 <Link
                   href="#academy"
-                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#CBB26A] md:p-0 dark:text-white md:dark:hover:text-[#CBB26A] dark:hover:bg-gray-700 dark:hover:text-[#CBB26A] md:dark:hover:bg-transparent"
+                  className="block py-2 pl-3 pr-4 text-white  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#CBB26A] md:p-0 dark:text-white md:dark:hover:text-[#CBB26A] dark:hover:bg-gray-700 dark:hover:text-[#CBB26A] md:dark:hover:bg-transparent"
                 >
                   GRITO Academy
                 </Link>
@@ -49,7 +49,7 @@ const Navbar = () => {
               <li>
                 <Link
                   href="#footer"
-                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#CBB26A] md:p-0 dark:text-white md:dark:hover:text-[#CBB26A] dark:hover:bg-gray-700 dark:hover:text-[#CBB26A] md:dark:hover:bg-transparent"
+                  className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#CBB26A] md:p-0 dark:text-white md:dark:hover:text-[#CBB26A] dark:hover:bg-gray-700 dark:hover:text-[#CBB26A] md:dark:hover:bg-transparent"
                 >
                   Contact Us
                 </Link>

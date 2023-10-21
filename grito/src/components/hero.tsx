@@ -14,8 +14,6 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { EffectCoverflow, Navigation } from "swiper/modules";
 
-import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
-
 export default function Hero() {
   const [hero, setHero] = useState<Post[]>([]);
 
@@ -28,7 +26,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <>
+    <div id="hire">
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
@@ -51,52 +49,53 @@ export default function Hero() {
       >
         {hero.map((talent) => (
           <SwiperSlide key={talent._id}>
-            <div className="w-[796px] container mx-auto h-[529px] bg-zinc-950 rounded-[20px] backdrop-blur-[30px] flex place-content-between py-10 ">
-              <div className="mx-auto flex justify-between gap-20">
-                <div className="flex flex-col gap-10 place-items-start">
-                  <div className="w-[30px] h-[30px]">
-                    <div>
-                      <Image
-                        src={urlFor(talent.countryImgUrl)
-                          .width(85)
-                          .fit("max")
-                          .height(61)
-                          .url()}
-                        alt={talent.name}
-                        width={85}
-                        height={61}
-                        className="w-full h-full rounded"
-                      />
+            <div className="w-[796px] justify-center items-center mx-auto h-[529px] bg-zinc-950 rounded-[20px] flex py-10">
+              <div className="flex gap-20">
+                <div className="flex flex-col gap-10 justify-self-auto">
+                  <div className="w-[85px] h-[61px]">
+                    <Image
+                      src={urlFor(talent.countryImgUrl)
+                        .width(85)
+                        .fit("scale")
+                        .height(61)
+                        .url()}
+                      alt={talent.name}
+                      width={85}
+                      height={61}
+                      className="w-full h-full rounded"
+                    />
+                  </div>
+                  <div className="flex gap-10 items-center">
+                    <div className="flex flex-col">
+                      <p className="text-[#CBB26A] pb-5">Name:</p>
+                      <p className="text-[#CBB26A] py-5">Country: </p>
+                      <p className="text-[#CBB26A] py-5">Skill Set: </p>
+                      <p className="text-[#CBB26A] py-5">Level: </p>
+                      <p className="text-[#CBB26A] py-5">Gender: </p>
+                      <p className="text-[#CBB26A] py-5">View Profile:</p>
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-[#eaeaf7] pb-5">{talent.name}</span>
+                      <span className="text-[#eaeaf7] py-5">
+                        {talent.country}
+                      </span>
+                      <span className="text-[#eaeaf7] py-5">
+                        {talent.level}
+                      </span>
+                      <span className="text-[#eaeaf7] py-5">
+                        {talent.skillSet}
+                      </span>
+                      <span className="text-[#eaeaf7] py-5">
+                        {talent.gender}
+                      </span>
+                      <Link href={talent.profile} className="py-5">
+                        <span className="text-[#5452db] ">{talent.name}</span>
+                      </Link>
                     </div>
                   </div>
-                  <p className="text-[#CBB26A]">
-                    Name: <span className="text-[#eaeaf7]">{talent.name}</span>
-                  </p>
-                  <p className="text-[#CBB26A]">
-                    Country:{" "}
-                    <span className="text-[#eaeaf7]">{talent.country}</span>
-                  </p>
-                  <p className="text-[#CBB26A]">
-                    Skill Set:{" "}
-                    <span className="text-[#eaeaf7]">{talent.skillSet}</span>
-                  </p>
-                  <p className="text-[#CBB26A]">
-                    Level:{" "}
-                    <span className="text-[#eaeaf7]">{talent.level}</span>
-                  </p>
-                  <p className="text-[#CBB26A]">
-                    Gender:{" "}
-                    <span className="text-[#eaeaf7]">{talent.gender}</span>
-                  </p>
-                  <p className="text-[#CBB26A]">
-                    View Profile:{" "}
-                    <Link href={talent.profile}>
-                      <span className="text-[#5452db] ">{talent.name}</span>
-                    </Link>
-                  </p>
                 </div>
 
-                <div className="flex flex-col gap-16">
+                <div className="flex flex-col justify-center gap-10">
                   <div>
                     <Image
                       src={urlFor(talent.imgUrl)
@@ -107,26 +106,67 @@ export default function Hero() {
                       alt={talent.name}
                       width={227}
                       height={320}
-                      className="w-full rounded h-full"
+                      className="w-full rounded-[20px] h-full"
                     />
                   </div>
-                  <p className="text-[#CBB26A]">{talent.skillName}</p>
+                  <p className="text-[#CBB26A] pt-8">{talent.skillName}</p>
                 </div>
               </div>
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
-      <FaArrowAltCircleLeft className="swiper-button-prev" />
 
-      <FaArrowAltCircleRight className="swiper-button-next" />
-      <div className="flex justify-center items-center py-10 gap-5"></div>
+      <div className="flex justify-center items-center gap-10 pt-10">
+        <button
+          type="button"
+          className="text-white w-[50px] h-[50px] bg-zinc-950 transition duration-150 ease-in-out rounded-full border  font-medium text-sm p-2.5 text-center inline-flex items-center mr-2"
+        >
+          <svg
+            className="w-[48px] h-[48px] text-[#CBB26A] dark:text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 10"
+          >
+            <path
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="1.6"
+              d="M13 5H1m0 0 4 4M1 5l4-4"
+            />
+          </svg>
+          <span className="sr-only">Icon description</span>
+        </button>
+        <button
+          type="button"
+          className="text-white w-[50px] h-[50px] bg-[#CBB26A] border shadow-md shadow-[#CBB26A] border-[#CBB26A] font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center mr-2"
+        >
+          <svg
+            className="w-[48px] h-[48px] text-gray-800 dark:text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 10"
+          >
+            <path
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="1.6"
+              d="M1 5h12m0 0L9 1m4 4L9 9"
+            />
+          </svg>
+          <span className="sr-only">Icon description</span>
+        </button>
+      </div>
 
       <div className="flex justify-center items-center shadow-lg py-10">
-        <button className="w-[182px] h-11 px-3 py-3 border-[#080808] shadow-lg rounded-2xl border bg-[#CBB26A] justify-center items-center gap-2 inline-flex">
+        <button className="w-[182px] h-11 transition duration-150 ease-in-out px-3 py-3 rounded-2xl shadow-md shadow-[#CBB26A]  bg-[#CBB26A] justify-center items-center gap-2 inline-flex">
           <p className="text-black text-lg font-[500px]">Custom Request</p>
         </button>
       </div>
-    </>
+    </div>
   );
 }
