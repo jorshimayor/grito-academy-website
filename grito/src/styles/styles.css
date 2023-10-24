@@ -1,12 +1,13 @@
 .slider-controler .swiper-button-next {
-    left: 58% !important;
-    transform: translateX(-58%) !important;
+    left: 50% !important;
+    transform: translateX(-128%) !important;
+    transform: translateY(78%) !important;
 }
 
 @media (max-width: 990px) {
     .slider-controler .swiper-button-next {
         left: 70% !important;
-        transform: translateX(-70%) !important;
+        transform: translateX(-10%) !important;
     }
 }
 
@@ -19,7 +20,7 @@
 
 @media (max-width: 990px) {
     .slider-controler .swiper-button-prev {
-        left: 30% !important;
+        left: 20% !important;
         transform: translateX(-30%) !important;
     }
 }
@@ -45,11 +46,10 @@
 
 
 .slider-controler .slider-arrow {
-    background: var(--white);
-    width: 3.5rem;
+    width: 4.5rem;
     height: 3.5rem;
     border-radius: 50%;
-    left: 42%;
-    transform: translateX(-42%);
-    filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+    left: 46%;
+    transform: translateX(2%);
+    transform: translateY(82%);
 }

@@ -130,7 +130,7 @@ export default function Hero() {
       </Swiper>
 
       <div className="slider-controler flex justify-center items-center gap-10 pt-10">
-        <div className="swiper-button-prev slider-arrow">
+        <div className="swiper-button-prev slider-arrow prev-button">
           <button
             type="button"
             className="text-white w-[50px] h-[50px] bg-black1 rounded-full border font-medium text-sm p-2.5 text-center inline-flex items-center mr-2"
@@ -153,7 +153,7 @@ export default function Hero() {
             <span className="sr-only">Icon description</span>
           </button>
         </div>
-        <div className="swiper-button-next slider-arrow">
+        <div className="swiper-button-next slider-arrow next-button">
           <button
             type="button"
             className="text-white w-[50px] h-[50px] bg-gold border shadow-md shadow-gold border-gold font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center mr-2"
@@ -205,7 +205,7 @@ export default function Hero() {
               <p className="text-[#CBB26A] pt-1">Any other information: </p>
             </div>
             <div className="space-y-10 ">
-              <div>
+              <div className="pt-2">
                 <TextInput
                   id="name"
                   sizing="md"
@@ -229,8 +229,7 @@ export default function Hero() {
                   <option value="Chad">Chad</option>
                   <option value="Comoros">Comoros</option>
                   <option value="Congo">
-                    {" "}
-                    <option value=""></option>Democratic Republic of the Congo
+                    Democratic Republic of the Congo
                   </option>
                   <option value="Republic of the Cote d’Ivoire">
                     Republic of the Cote d’Ivoire
@@ -290,19 +289,19 @@ export default function Hero() {
                     name="skills"
                     value="beginner"
                   />
-                  <Label htmlFor="Beginner" className="text-white">
+                  <Label htmlFor="Beginner" className="text-white pt-1">
                     Beginner
                   </Label>
                 </div>
                 <div className="flex items-center gap-2">
                   <Radio id="intermediate" name="skills" value="intermediate" />
-                  <Label htmlFor="intermediate" className="text-white">
+                  <Label htmlFor="intermediate" className="text-white pt-1">
                     Intermediate
                   </Label>
                 </div>
                 <div className="flex items-center gap-2">
                   <Radio id="professional" name="skills" value="professional" />
-                  <Label htmlFor="professional" className="text-white">
+                  <Label htmlFor="professional" className="text-white pt-1">
                     Professional
                   </Label>
                 </div>
@@ -310,13 +309,13 @@ export default function Hero() {
               <fieldset className="flex max-w-md gap-4" id="radio">
                 <div className="flex items-center gap-2">
                   <Radio defaultChecked id="male" name="gender" value="male" />
-                  <Label htmlFor="male" className="text-white">
+                  <Label htmlFor="male" className="text-white pt-1">
                     Male
                   </Label>
                 </div>
                 <div className="flex items-center gap-2">
                   <Radio id="female" name="gender" value="female" />
-                  <Label htmlFor="female" className="text-white">
+                  <Label htmlFor="female" className="text-white pt-1">
                     Female
                   </Label>
                 </div>
