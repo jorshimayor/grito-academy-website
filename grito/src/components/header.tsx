@@ -3,7 +3,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div className="h-[900px] w-full flex flex-wrap">
+    <div id="home" className="h-[900px] w-full flex flex-wrap">
       <div className="w-2/5 pt-[200px] pl-[50px]">
         <div className="animate-fade-right animate-duration-1500 animate-delay-100 animate-fill-forwards">
           <div>

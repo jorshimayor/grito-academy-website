@@ -9,13 +9,26 @@ import { Post } from "@/libs/interface";
 import { client } from "@/libs/sanity";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "../styles/styles.css";
 import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { EffectCoverflow, Navigation } from "swiper/modules";
 
+import {
+  Button,
+  Label,
+  Modal,
+  Textarea,
+  TextInput,
+  Radio,
+  Select,
+} from "flowbite-react";
+
 export default function Hero() {
   const [hero, setHero] = useState<Post[]>([]);
+  const [openModal, setOpenModal] = useState<string | undefined>();
+  const props = { openModal, setOpenModal };
 
   useEffect(() => {
     const query = '*[_type == "talent"]';
@@ -31,25 +44,24 @@ export default function Hero() {
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
-        loop={true}
         slidesPerView={"auto"}
         coverflowEffect={{
-          rotate: 0,
+          rotate: 50,
           stretch: 0,
           depth: 100,
-          modifier: 2.5,
+          modifier: 1,
+          slideShadows: true,
         }}
-        pagination={{ el: ".swiper-pagination", clickable: true }}
+        className="mySwiper"
         navigation={{
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         }}
         modules={[EffectCoverflow, Navigation]}
-        className="swiper_container"
       >
         {hero.map((talent) => (
           <SwiperSlide key={talent._id}>
-            <div className="w-[796px] justify-center items-center mx-auto h-[529px] bg-zinc-950 rounded-[20px] flex py-10">
+            <div className="w-[700px] justify-center items-center mx-auto h-[500px] bg-zinc-950 rounded-[20px] flex py-10">
               <div className="flex gap-20">
                 <div className="flex flex-col gap-10 justify-self-auto">
                   <div className="w-[85px] h-[61px]">
@@ -89,7 +101,7 @@ export default function Hero() {
                         {talent.gender}
                       </span>
                       <Link href={talent.profile} className="py-5">
-                        <span className="text-[#5452db] ">{talent.name}</span>
+                        <span className="text-[#5452db]">{talent.name}</span>
                       </Link>
                     </div>
                   </div>
@@ -117,56 +129,215 @@ export default function Hero() {
         ))}
       </Swiper>
 
-      <div className="flex justify-center items-center gap-10 pt-10">
-        <button
-          type="button"
-          className="text-white w-[50px] h-[50px] bg-zinc-950 transition duration-150 ease-in-out rounded-full border  font-medium text-sm p-2.5 text-center inline-flex items-center mr-2"
-        >
-          <svg
-            className="w-[48px] h-[48px] text-[#CBB26A] dark:text-white"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 14 10"
+      <div className="slider-controler flex justify-center items-center gap-10 pt-10">
+        <div className="swiper-button-prev slider-arrow">
+          <button
+            type="button"
+            className="text-white w-[50px] h-[50px] bg-black1 rounded-full border font-medium text-sm p-2.5 text-center inline-flex items-center mr-2"
           >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="1.6"
-              d="M13 5H1m0 0 4 4M1 5l4-4"
-            />
-          </svg>
-          <span className="sr-only">Icon description</span>
-        </button>
-        <button
-          type="button"
-          className="text-white w-[50px] h-[50px] bg-[#CBB26A] border shadow-md shadow-[#CBB26A] border-[#CBB26A] font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center mr-2"
-        >
-          <svg
-            className="w-[48px] h-[48px] text-gray-800 dark:text-white"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 14 10"
+            <svg
+              className="w-[48px] h-[48px] text-gold"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 14 10"
+            >
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.6"
+                d="M13 5H1m0 0 4 4M1 5l4-4"
+              />
+            </svg>
+            <span className="sr-only">Icon description</span>
+          </button>
+        </div>
+        <div className="swiper-button-next slider-arrow">
+          <button
+            type="button"
+            className="text-white w-[50px] h-[50px] bg-gold border shadow-md shadow-gold border-gold font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center mr-2"
           >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="1.6"
-              d="M1 5h12m0 0L9 1m4 4L9 9"
-            />
-          </svg>
-          <span className="sr-only">Icon description</span>
-        </button>
+            <svg
+              className="w-[48px] h-[48px] text-black1"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 14 10"
+            >
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.6"
+                d="M1 5h12m0 0L9 1m4 4L9 9"
+              />
+            </svg>
+            <span className="sr-only">Icon description</span>
+          </button>
+        </div>
       </div>
 
-      <div className="flex justify-center items-center shadow-lg py-10">
-        <button className="w-[182px] h-11 transition duration-150 ease-in-out px-3 py-3 rounded-2xl shadow-md shadow-[#CBB26A]  bg-[#CBB26A] justify-center items-center gap-2 inline-flex">
-          <p className="text-black text-lg font-[500px]">Custom Request</p>
-        </button>
+      <div className="justify-center items-center flex my-10">
+        <Button
+          className="shadow-md text-black rounded-[20px] shadow-gold bg-gold"
+          onClick={() => props.setOpenModal("form-elements")}
+        >
+          Custom Request
+        </Button>
       </div>
+      <Modal
+        show={props.openModal === "form-elements"}
+        size="xl"
+        popup
+        onClose={() => props.setOpenModal(undefined)}
+        className="mx-auto w-[650px] h-[640px] bg-black1 rounded-[20px] border border-gold"
+      >
+        <Modal.Header className="text-white hover:text-gold bg-black1" />
+        <Modal.Body className="bg-black1  w-[630px] h-[600px] mx-auto rounded-[5px] text-gold center">
+          <div className="flex items-center justify-center gap-5">
+            <div className="flex flex-col space-y-10">
+              <p className="text-[#CBB26A] pb-0">Name of Talent:</p>
+              <p className="text-[#CBB26A] py-4">Country: </p>
+              <p className="text-[#CBB26A] pt-3">Skill Set: </p>
+              <p className="text-[#CBB26A] pt-1">Level: </p>
+              <p className="text-[#CBB26A] pb-2">Gender: </p>
+              <p className="text-[#CBB26A] pt-1">Any other information: </p>
+            </div>
+            <div className="space-y-10 ">
+              <div>
+                <TextInput
+                  id="name"
+                  sizing="md"
+                  placeholder="Full Name"
+                  type="text"
+                />
+              </div>
+              <div className="w-[168px] h-[40px]" id="select">
+                <Select id="countries">
+                  <option value="Algeria">Algeria</option>
+                  <option value="Angola">Angola</option>
+                  <option value="Benin">Benin</option>
+                  <option value="Botswana">Botswana</option>
+                  <option value="Burkina Faso">Burkina Faso</option>
+                  <option value="Burundi">Burundi</option>
+                  <option value="Cabo Verde">Cabo Verde</option>
+                  <option value="Cameroon">Cameroon</option>
+                  <option value="Central African Republic (CAR)">
+                    Central African Republic (CAR){" "}
+                  </option>
+                  <option value="Chad">Chad</option>
+                  <option value="Comoros">Comoros</option>
+                  <option value="Congo">
+                    {" "}
+                    <option value=""></option>Democratic Republic of the Congo
+                  </option>
+                  <option value="Republic of the Cote d’Ivoire">
+                    Republic of the Cote d’Ivoire
+                  </option>
+                  <option value="Djibouti">Djibouti</option>
+                  <option value="Egypt">Egypt</option>
+                  <option value="Equatorial Guinea">Equatorial Guinea</option>
+                  <option value="Eritrea">Eritrea</option>
+                  <option value="Eswatini">Eswatini</option>
+                  <option value="Ethiopia">Ethiopia</option>
+                  <option value="Gabon">Gabon</option>
+                  <option value="Gambia">Gambia</option>
+                  <option value="Ghana">Ghana</option>
+                  <option value="Guinea">Guinea</option>
+                  <option value="Guinea-Bissau">Guinea-Bissau</option>
+                  <option value="Kenya">Kenya</option>
+                  <option value="Lesotho">Lesotho</option>
+                  <option value="Liberia">Liberia</option>
+                  <option value="Libya">Libya</option>
+                  <option value="Madagascar">Madagascar</option>
+                  <option value="Malawi">Malawi</option>
+                  <option value="Mali">Mali</option>
+                  <option value="Mauritania">Mauritania</option>
+                  <option value="Mauritius">Mauritius</option>
+                  <option value="Morocco">Morocco</option>
+                  <option value="Mozambique">Mozambique</option>
+                  <option value="Namibia">Namibia</option>
+                  <option value="Niger">Niger</option>
+                  <option value="Nigeria">Nigeria</option>
+                  <option value="Rwanda">Rwanda</option>
+                  <option value="Sao Tome and Principe">
+                    Sao Tome and Principe
+                  </option>
+                  <option value="Senegal">Senegal</option>
+                  <option value="Seychelles">Seychelles</option>
+                  <option value="Sierra Leone">Sierra Leone</option>
+                  <option value="Somalia">Somalia</option>
+                  <option value="South Africa">South Africa</option>
+                  <option value="South Sudan ">South Sudan </option>
+                  <option value="Sudan">Sudan</option>
+                  <option value="Tanzania">Tanzania</option>
+                  <option value="Togo">Togo</option>
+                  <option value="Tunisia">Tunisia</option>
+                  <option value="Uganda">Uganda</option>
+                  <option value="Zambia">Zambia</option>
+                  <option value="Zimbabwe">Zimbabwe</option>
+                </Select>
+              </div>
+              <div className="max-w-md" id="textarea">
+                <Textarea id="comment" placeholder="Skills desired" rows={2} />
+              </div>
+              <fieldset className="flex max-w-md gap-4" id="radio">
+                <div className="flex items-center gap-2">
+                  <Radio
+                    defaultChecked
+                    id="beginner"
+                    name="skills"
+                    value="beginner"
+                  />
+                  <Label htmlFor="Beginner" className="text-white">
+                    Beginner
+                  </Label>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Radio id="intermediate" name="skills" value="intermediate" />
+                  <Label htmlFor="intermediate" className="text-white">
+                    Intermediate
+                  </Label>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Radio id="professional" name="skills" value="professional" />
+                  <Label htmlFor="professional" className="text-white">
+                    Professional
+                  </Label>
+                </div>
+              </fieldset>
+              <fieldset className="flex max-w-md gap-4" id="radio">
+                <div className="flex items-center gap-2">
+                  <Radio defaultChecked id="male" name="gender" value="male" />
+                  <Label htmlFor="male" className="text-white">
+                    Male
+                  </Label>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Radio id="female" name="gender" value="female" />
+                  <Label htmlFor="female" className="text-white">
+                    Female
+                  </Label>
+                </div>
+              </fieldset>
+              <div className="max-w-md" id="textarea">
+                <Textarea
+                  className=""
+                  id="comment"
+                  placeholder="Additional information..."
+                  rows={2}
+                />
+              </div>
+            </div>
+          </div>
+          <div className="justify-center items-center flex my-5">
+            <Button type="submit" className="rounded-[20px] border border-gold">
+              Submit
+            </Button>
+          </div>
+        </Modal.Body>
+      </Modal>
     </div>
   );
 }

@@ -7,7 +7,7 @@ const Footer = () => {
 
   return (
     <div>
-      <footer id="footer" className="bg-[#080808] w-full h-[636px]">
+      <footer id="contact" className="bg-[#080808] w-full h-[636px]">
         <div className=" w-full justify-center space-x-10 items-center flex flex-wrap ">
           <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4 pl-20 mt-[56px] ml-20 sm:flex-col">
             <div className="pl-20">

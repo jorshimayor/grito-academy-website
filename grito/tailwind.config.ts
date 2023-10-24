@@ -6,9 +6,15 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     "./node_modules/flowbite/**/*.js",
+    "./pages/**/*.{ts,tsx}",
+    "./public/**/*.html",
   ],
   theme: {
     extend: {
+      colors: {
+        'gold': '#CBB26A',
+        'black1': '#080808',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -207,7 +213,6 @@ const config: Config = {
   plugins: [
     require('tailwindcss-animated'),
     require('flowbite/plugin'),
-
-  ],
+    ],
 }
 export default config
