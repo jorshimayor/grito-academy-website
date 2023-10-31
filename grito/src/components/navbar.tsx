@@ -15,7 +15,10 @@ function NavBar() {
           <div>
             <div className="flex items-center justify-between md:py-4 md:block">
               {/* LOGO */}
-              <Link href="#home" className="flex items-start md:-ml-20">
+              <Link
+                href="#home"
+                className="flex items-start lg:-ml-20 max-sm:pt-4"
+              >
                 <Image
                   src="/logo.png"
                   className=""
@@ -26,7 +29,7 @@ function NavBar() {
               </Link>
 
               {/* HAMBURGER BUTTON FOR MOBILE */}
-              <div className="md:hidden">
+              <div className="md:hidden max-sm:pt-4">
                 <button
                   className="p-2 text-gold rounded-md outline-none focus:border-gray-400 focus:border"
                   onClick={() => setNavbar(!navbar)}
@@ -43,7 +46,7 @@ function NavBar() {
                 navbar ? "p-12 md:p-0 block" : "hidden"
               }`}
             >
-              <ul className="h-screen md:h-auto items-center justify-center md:flex md:-mr-20 ">
+              <ul className="h-screen md:h-auto items-center justify-center md:flex ">
                 <li className="pb-6 text-xl text-gold md:pt-6 md:px-6 text-center hover:scale-105 hover:text-white">
                   <Link href="#home" onClick={() => setNavbar(!navbar)}>
                     Home
@@ -59,7 +62,7 @@ function NavBar() {
                     GRITO Academy
                   </Link>
                 </li>
-                <li className="pb-6 text-xl text-white md:pt-6 px-6 text-center hover:scale-105 hover:text-gold">
+                <li className="pb-6 text-xl text-white md:pt-6 text-center hover:scale-105 hover:text-gold">
                   <Link href="#contact" onClick={() => setNavbar(!navbar)}>
                     Contact Us
                   </Link>
