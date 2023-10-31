@@ -5,22 +5,22 @@ import React from "react";
 const Academy = () => {
   return (
     <div id="academy">
-      <div className="flex flex-col h-[476px] items-center justify-center w-full simple-blended">
-        <h1 className="text-center text-[#CBB26A] text-[32px]">
+      <div className="md:flex md:flex-col md:h-[476px] md:items-center px-5 md:justify-center md:w-full simple-blended">
+        <h1 className="text-center text-[#CBB26A] text-[32px] ">
           WHY YOU SHOULD ENROLL AT GRITO ACADEMY?
         </h1>
 
-        <div className="flex justify-center items-center gap-10 my-10 pt-5">
-          <div className="flex flex-col gap-10">
+        <div className="md:flex md:justify-center md:items-center gap-10 my-10 md:pt-5">
+          <div className="md:flex md:flex-col md:gap-10">
             <div className="flex gap-5">
               <div>
                 <Image src="/book.png" width={30} height={30} alt="book" />
               </div>
 
-              <p className="text-justify text-white">
-                Learn in milestones at your own pace and build your <br />
-                first software product within 60 days with Your Expert <br />
-                Tech Guide.
+              <p className="md:text-justify text-white">
+                Learn in milestones at your own pace and build your first <br />
+                software product within 60 days with Your Expert Tech Guide.{" "}
+                <br />
               </p>
             </div>
 
@@ -30,19 +30,20 @@ const Academy = () => {
               </div>
 
               <p className="text-justify text-white">
-                Enroll at GRITO Academy on our flexible payment <br />
-                plans and win bonuses on referrals
+                Enroll at GRITO Academy on our flexible payment plans and win{" "}
+                <br />
+                bonuses on referrals
               </p>
             </div>
           </div>
 
-          <div className="flex justify-center items-center flex-col gap-10">
+          <div className="md:flex md:justify-center md:items-center md:flex-col md:gap-10">
             <div className="flex gap-5">
               <div>
                 <Image src="/book.png" width={30} height={30} alt="book" />
               </div>
 
-              <p className="text-justify text-white">
+              <p className="md:text-justify text-white">
                 Learn HTML, CSS and Javascript in your African local <br />
                 dialect.
               </p>
@@ -53,7 +54,7 @@ const Academy = () => {
                 <Image src="/book.png" width={30} height={30} alt="book" />
               </div>
 
-              <p className="text-justify text-white ">
+              <p className="md:text-justify text-white ">
                 Join our Virtual Internship Program (VIP) to prepare for <br />
                 your dream tech job.
               </p>
@@ -61,7 +62,7 @@ const Academy = () => {
           </div>
         </div>
 
-        <button className="w-64 h-11 px-3 py-3 bg-[#080808] rounded-2xl border border-[#CBB26A] justify-center items-center gap-2 inline-flex">
+        <button className="md:w-64 hover:scale-105 hover:text-gold md:h-11 md:px-3 py-3 bg-[#080808] rounded-2xl border border-[#CBB26A] md:justify-center md:items-center md:gap-2 md:inline-flex">
           <p className="text-white text-lg font-semibold">
             Click To Get Started
           </p>

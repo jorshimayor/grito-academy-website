@@ -3,22 +3,21 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div id="home" className="h-[900px] md:flex flex-wrap max-sm:mx-auto">
-      <div className="w-2/5 pt-[200px] pl-[50px]">
+    <div id="home" className="h-fit w-fit md:flex flex-wrap max-sm:mx-auto">
+      <div className="md:w-2/5 pt-[200px] md:pl-[50px] mx-auto px-5">
         <div className="animate-fade-right animate-duration-1500 animate-delay-100 animate-fill-forwards">
           <div>
-            <span className="text-[#CBB26A] text-7xl font-semibold tracking-widest">
+            <span className="text-gold text-7xl font-semibold tracking-widest">
               Hire
             </span>
 
-            <span className="text-[#CBB26A] text-7xl font-semibold tracking-widest pl-8">
+            <span className="text-gold text-7xl font-semibold tracking-widest pl-8">
               African
-              <br />
             </span>
           </div>
 
           <div className="pt-5 animate-fade-left animate-duration-[1500ms] animate-delay-100 animate-ease-in-out">
-            <span className="text-[#CBB26A] text-7xl font-semibold tracking-widest">
+            <span className="text-gold text-7xl font-semibold tracking-widest max-sm:text-6xl">
               Tech Talents!
             </span>
           </div>
@@ -38,22 +37,24 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="w-3/5">
+      <div className="md:w-3/5">
         <div className="flex justify-center items-center flex-wrap max-sm:flex-col mt-10">
           <div className="flex mt-10 items-center">
-            <div className="w-80 h-80 animate-fade-right animate-duration-[1700ms] animate-delay-200 animate-ease-in-out animate-fill-forwards bg-black1 rounded-2xl border-2 border-gold max-sm:relative">
-              <p className="text-white text-base text-justify pt-5 pl-5 font-semibold">
-                Hi, I’m Gustavo, founder at GRITO <br /> talent factory.....
-              </p>
+            <div className="max-sm:absolute max-sm:items-center max-sm:justify-center">
+              <div className="w-80 h-80 animate-fade-right animate-duration-[1700ms] animate-delay-200 animate-ease-in-out animate-fill-forwards bg-black1 rounded-2xl border-2 border-gold ">
+                <p className="text-white text-base text-justify pt-5 pl-5 font-semibold">
+                  Hi, I’m Gustavo, founder at GRITO <br /> talent factory.....
+                </p>
 
-              <div className="flex items-center justify-center pt-10">
-                <video
-                  src="/grivid.mp4"
-                  muted
-                  autoPlay
-                  loop
-                  className="aspect-video bg-cover"
-                />
+                <div className="flex items-center justify-center pt-10">
+                  <video
+                    src="/grivid.mp4"
+                    muted
+                    autoPlay
+                    loop
+                    className="aspect-video bg-cover"
+                  />
+                </div>
               </div>
             </div>
 
@@ -87,7 +88,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="w-[1330px] h-[0px] border border-stone-600 mx-auto"></div>{" "}
+      <div className="w-[1330px] my-20 mx-auto h-[0px] border border-stone-600 max-sm:w-[500px] max-sm:h-0 max-sm:mb-5"></div>{" "}
     </div>
   );
 };

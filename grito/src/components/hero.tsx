@@ -39,7 +39,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <div id="hire">
+    <div id="hire md:mt-5">
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
@@ -61,8 +61,8 @@ export default function Hero() {
       >
         {hero.map((talent) => (
           <SwiperSlide key={talent._id}>
-            <div className="w-[700px] justify-center items-center mx-auto h-[500px] bg-zinc-950 rounded-[20px] flex py-10">
-              <div className="flex gap-20">
+            <div className="md:w-[700px] md:justify-center md:items-center md:mx-auto md:h-[500px] bg-zinc-950 rounded-[20px] md:flex py-10">
+              <div className="md:flex md:gap-20">
                 <div className="flex flex-col gap-10 justify-self-auto">
                   <div className="w-[85px] h-[61px]">
                     <Image

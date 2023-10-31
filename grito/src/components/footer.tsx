@@ -7,11 +7,17 @@ const Footer = () => {
 
   return (
     <div>
-      <footer id="contact" className="bg-[#080808] w-full h-[636px]">
-        <div className="md:w-full justify-center space-x-10 items-center flex flex-wrap">
-          <div className="md:grid grid-cols-2 gap-8 px-10 py-6 lg:py-8 md:grid-cols-4 pl-20 mt-[56px] ml-[165px] sm:flex-col">
+      <footer id="contact" className="bg-black1 w-fit h-fit">
+        <div className="md:w-fit justify-center space-x-10 items-center flex flex-wrap max-sm:flex-col max-sm:items-center max-sm:w-screen max-sm:justify-center">
+          <div className="md:grid md:gap-8 md:px-10 md:py-6 lg:py-8 md:grid-cols-4 md:pl-20 md:mt-[56px] md:ml-[165px]">
             <div className="ml-20">
-              <Image src="/logo.png" width={130} height={87} alt="logo" />
+              <Image
+                src="/logo.png"
+                width={130}
+                height={87}
+                alt="logo"
+                className="max-sm:hidden"
+              />
 
               <ul className="text-white font-[18px]">
                 <li className="md:my-4">
@@ -25,15 +31,15 @@ const Footer = () => {
                 </li>
 
                 <li className="md:mb-4">
-                  <p>Africa: +234 802 919 7097</p>
-
-                  <p>Email: emeka@grito.africa</p>
-                </li>
-
-                <li className="md:mb-4">
                   <p>Europe: +346 310 385 88</p>
 
                   <p>Email: gustavo@grito.africa</p>
+                </li>
+
+                <li className="md:mb-4">
+                  <p>Africa: +234 802 919 7097</p>
+
+                  <p>Email: emeka@grito.africa</p>
                 </li>
               </ul>
             </div>
@@ -43,13 +49,15 @@ const Footer = () => {
                 OFFICE HOURS
               </h2>
 
-              <ul className="text-white font-[18px]">
-                <li className="my-10 pl-4">
-                  <p>9am - 4pm (Mon - Sat, WAT)</p>
+              <ul className="text-white font-[10px]">
+                <li className="my-10">
+                  <p className="text-center">
+                    9am - 4pm <br /> (Mon - Sat, WAT)
+                  </p>
                 </li>
 
                 <li className="md:my-20">
-                  <button className="w-48 h-11 px-3 py-3 bg-[#080808] rounded-2xl border border-[#CBB26A] justify-center items-center gap-2 inline-flex">
+                  <button className="w-48 h-11 px-3 py-3 bg-[#080808] hover:scale-105 hover:text-gold rounded-2xl border border-[#CBB26A] justify-center items-center gap-2 inline-flex">
                     <p className="text-[#CBB26A] text-lg font-semibold">
                       Chat With Us
                     </p>
@@ -68,8 +76,8 @@ const Footer = () => {
                   </p>
                 </li>
 
-                <div className="md:flex my-20 justify-center items-center gap-5">
-                  <li className="md:mb-4">
+                <li className="md:flex my-20 justify-center items-center gap-5">
+                  <div className="md:mb-4">
                     <Link href="https://www.youtube.com/@gritotalentagency">
                       <Image
                         src="/youtube.png"
@@ -78,9 +86,9 @@ const Footer = () => {
                         height={40}
                       />
                     </Link>
-                  </li>
+                  </div>
 
-                  <li className="md:mb-4">
+                  <div className="md:mb-4">
                     <Link href="https://www.linkedin.com/company/grito-talent-agency">
                       <Image
                         src="/linkedin.png"
@@ -89,14 +97,14 @@ const Footer = () => {
                         height={40}
                       />
                     </Link>
-                  </li>
-                </div>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
         </div>
 
-        <p className="flex text-center text-white justify-center items-center md:flex md:items-center md:justify-center">
+        <p className="flex text-center text-white justify-center items-center">
           © ALL RIGHTS RESERVED {currentYear} | GRITO TALENT FACTORY
         </p>
       </footer>
