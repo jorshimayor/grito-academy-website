@@ -1,11 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 const Academy = () => {
   return (
-    <div id="academy">
-      <div className="md:flex md:flex-col md:h-[476px] md:items-center px-5 md:justify-center md:w-full simple-blended">
+    <div id="academy" className="sm:w-screen simple-blended">
+      <div className="md:flex md:flex-col h-[636px] md:items-center px-4 md:justify-center">
         <h1 className="text-center text-[#CBB26A] text-[32px] ">
           WHY YOU SHOULD ENROLL AT GRITO ACADEMY?
         </h1>
@@ -30,9 +29,8 @@ const Academy = () => {
               </div>
 
               <p className="text-justify text-white">
-                Enroll at GRITO Academy on our flexible payment plans and win{" "}
-                <br />
-                bonuses on referrals
+                Enroll at GRITO Academy on our flexible payment plans and <br />
+                win bonuses on referrals
               </p>
             </div>
           </div>

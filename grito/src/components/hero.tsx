@@ -79,7 +79,7 @@ export default function Hero() {
                   </div>
                   <div className="flex gap-10 items-center">
                     <div className="flex flex-col">
-                      <p className="text-[#CBB26A] pb-5">Name:</p>
+                      <p className="text-[#CBB26A] pb-5">Name: </p>
                       <p className="text-[#CBB26A] py-5">Country: </p>
                       <p className="text-[#CBB26A] py-5">Skill Set: </p>
                       <p className="text-[#CBB26A] py-5">Level: </p>
@@ -130,7 +130,7 @@ export default function Hero() {
       </Swiper>
 
       <div className="slider-controler flex justify-center items-center gap-10 pt-10">
-        <div className="swiper-button-prev slider-arrow prev-button">
+        <div className="swiper-button-prev slider-arrow prev-button hover:scale-105">
           <button
             type="button"
             className="text-white w-[50px] h-[50px] bg-black1 rounded-full border font-medium text-sm p-2.5 text-center inline-flex items-center mr-2"
@@ -153,7 +153,7 @@ export default function Hero() {
             <span className="sr-only">Icon description</span>
           </button>
         </div>
-        <div className="swiper-button-next slider-arrow next-button">
+        <div className="swiper-button-next slider-arrow next-button hover:scale-105">
           <button
             type="button"
             className="text-white w-[50px] h-[50px] bg-gold border shadow-md shadow-gold border-gold font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center mr-2"
@@ -178,7 +178,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="justify-center items-center flex my-10">
+      <div className="justify-center items-center flex my-10 hover:scale-105">
         <Button
           className="shadow-md text-black rounded-[20px] shadow-gold bg-gold"
           onClick={() => props.setOpenModal("form-elements")}
@@ -330,7 +330,7 @@ export default function Hero() {
               </div>
             </div>
           </div>
-          <div className="justify-center items-center flex my-5">
+          <div className="justify-center items-center flex my-5 hover:scale-105">
             <Button type="submit" className="rounded-[20px] border border-gold">
               Submit
             </Button>

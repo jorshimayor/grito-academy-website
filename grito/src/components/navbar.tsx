@@ -11,14 +11,11 @@ function NavBar() {
   return (
     <div>
       <nav className="w-full bg-black h-[87px] fixed top-0 left-0 right-0 z-40">
-        <div className="justify-between px-2 mx-auto lg:max-w-7xl md:items-center md:flex md:px-2">
+        <div className="justify-between mx-auto lg:max-w-7xl md:items-center md:flex md:px-2">
           <div>
             <div className="flex items-center justify-between md:py-4 md:block">
               {/* LOGO */}
-              <Link
-                href="#home"
-                className="flex items-start lg:-ml-20 max-sm:pt-4"
-              >
+              <Link href="#home" className="flex items-start  max-sm:pt-4">
                 <Image
                   src="/logo.png"
                   className=""
@@ -47,7 +44,7 @@ function NavBar() {
               }`}
             >
               <ul className="h-screen md:h-auto items-center justify-center md:flex ">
-                <li className="pb-6 text-xl text-gold md:pt-6 md:px-6 text-center hover:scale-105 hover:text-white">
+                <li className="pb-6 text-xl text-gold md:pt-6 md:px-6  text-center hover:scale-105 hover:text-white">
                   <Link href="#home" onClick={() => setNavbar(!navbar)}>
                     Home
                   </Link>
@@ -62,7 +59,7 @@ function NavBar() {
                     GRITO Academy
                   </Link>
                 </li>
-                <li className="pb-6 text-xl text-white md:pt-6 text-center hover:scale-105 hover:text-gold">
+                <li className="pb-6 text-xl text-white md:pt-6 text-center md:-mr-5 hover:scale-105 hover:text-gold">
                   <Link href="#contact" onClick={() => setNavbar(!navbar)}>
                     Contact Us
                   </Link>

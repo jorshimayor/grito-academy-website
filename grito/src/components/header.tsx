@@ -1,5 +1,4 @@
 import Image from "next/image";
-import React from "react";
 
 const Header = () => {
   return (
@@ -7,17 +6,17 @@ const Header = () => {
       <div className="md:w-2/5 pt-[200px] md:pl-[50px] mx-auto px-5">
         <div className="animate-fade-right animate-duration-1500 animate-delay-100 animate-fill-forwards">
           <div>
-            <span className="text-gold text-7xl font-semibold tracking-widest">
+            <span className="text-gold text-6xl font-semibold tracking-widest">
               Hire
             </span>
 
-            <span className="text-gold text-7xl font-semibold tracking-widest pl-8">
+            <span className="text-gold text-6xl font-semibold tracking-widest pl-8">
               African
             </span>
           </div>
 
           <div className="pt-5 animate-fade-left animate-duration-[1500ms] animate-delay-100 animate-ease-in-out">
-            <span className="text-gold text-7xl font-semibold tracking-widest max-sm:text-6xl">
+            <span className="text-gold text-6xl font-semibold tracking-widest max-sm:text-6xl">
               Tech Talents!
             </span>
           </div>
@@ -88,7 +87,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="w-[1330px] my-20 mx-auto h-[0px] border border-stone-600 max-sm:w-[500px] max-sm:h-0 max-sm:mb-5"></div>{" "}
+      <div className="w-[1330px] my-[100px] mx-auto h-[0px] border border-stone-600 max-sm:w-[500px] max-sm:h-0 max-sm:mb-5"></div>{" "}
     </div>
   );
 };

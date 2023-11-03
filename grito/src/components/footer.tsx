@@ -1,16 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
     <div>
-      <footer id="contact" className="bg-black1 w-fit h-fit">
-        <div className="md:w-fit justify-center space-x-10 items-center flex flex-wrap max-sm:flex-col max-sm:items-center max-sm:w-screen max-sm:justify-center">
-          <div className="md:grid md:gap-8 md:px-10 md:py-6 lg:py-8 md:grid-cols-4 md:pl-20 md:mt-[56px] md:ml-[165px]">
-            <div className="ml-20">
+      <footer id="contact" className="bg-black1 w-fit h-fit mx-auto">
+        <div className="md:w-full justify-between space-x-[50px] items-center flex flex-wrap max-sm:flex-col max-sm:items-center max-sm:w-screen max-sm:justify-center">
+          <div className="md:grid md:gap-[100px] md:py-6 lg:py-8 md:grid-cols-5 md:mx-12 md:mt-[56px]">
+            <div className="md:">
               <Image
                 src="/logo.png"
                 width={130}
@@ -22,10 +21,7 @@ const Footer = () => {
               <ul className="text-white font-[18px]">
                 <li className="md:my-4">
                   <p>
-                    Carrer Sicilia 190 1ero 2°,
-                    <br />
-                    08013, Ciudad de Barcelona,
-                    <br />
+                    Carrer Sicilia 190 1ero 2°, 08013, Ciudad de Barcelona,
                     Espana.
                   </p>
                 </li>
@@ -44,8 +40,10 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div className="md:ml-20">
-              <h2 className="md:mb-6 text-[25px] text-center font-semibold text-[#CBB26A] uppercase pt-3">
+            <div className="w-[378.01px] h-[0px] -rotate-90 md:-ml-[100px] border md:mt-[190px] border-gold"></div>
+
+            <div className="">
+              <h2 className="md:mb-6 text-[25px] text-center  font-semibold text-[#CBB26A] uppercase pt-3">
                 OFFICE HOURS
               </h2>
 
@@ -57,7 +55,7 @@ const Footer = () => {
                 </li>
 
                 <li className="md:my-20">
-                  <button className="w-48 h-11 px-3 py-3 bg-[#080808] hover:scale-105 hover:text-gold rounded-2xl border border-[#CBB26A] justify-center items-center gap-2 inline-flex">
+                  <button className="w-48 h-11 py-3 bg-[#080808] hover:scale-105 hover:text-gold rounded-2xl border border-[#CBB26A] justify-center items-center inline-flex">
                     <p className="text-[#CBB26A] text-lg font-semibold">
                       Chat With Us
                     </p>
@@ -66,7 +64,9 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div className="md:pl-20">
+            <div className="w-[378.01px] h-[0px] -rotate-90 md:-ml-10 border md:mt-[190px] border-gold"></div>
+
+            <div className="md:">
               <ul className="text-white font-[18px]">
                 <li className="md:my-4">
                   <p className="md:text-center pt-10">
@@ -84,6 +84,7 @@ const Footer = () => {
                         alt="youtube"
                         width={40}
                         height={40}
+                        className="hover:scale-105"
                       />
                     </Link>
                   </div>
@@ -95,6 +96,7 @@ const Footer = () => {
                         alt="linkedin"
                         width={40}
                         height={40}
+                        className="hover:scale-105"
                       />
                     </Link>
                   </div>
